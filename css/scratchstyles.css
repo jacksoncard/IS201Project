@@ -1,0 +1,292 @@
+/*--------------------------------------------------------------
+# Professional Scratch Stylesheet
+# Target HTML: Sports Scratch Page
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Global Styles & Variables
+--------------------------------------------------------------*/
+:root {
+    /* Define some color variables for easy changes */
+    --primary-color: #0D47A1; /* Dark Blue */
+    --secondary-color: #1565C0; /* Medium Blue */
+    --accent-color: #1E88E5; /* Lighter Blue */
+    --text-color: #333333; /* Dark Grey */
+    --light-text-color: #666666; /* Medium Grey */
+    --background-color: #f4f7f6; /* Very Light Grey/Green */
+    --container-background: #ffffff; /* White */
+    --border-color: #e0e0e0; /* Light Grey */
+  }
+  
+  /* Apply smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Basic reset and body styling */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Professional sans-serif font stack */
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color); /* Custom background color */
+  }
+  
+  /*--------------------------------------------------------------
+  # Layout Container (.container div)
+  --------------------------------------------------------------*/
+  .container {
+    max-width: 1000px; /* Max width for content */
+    margin: 30px auto; /* Center container with top/bottom margin */
+    padding: 20px 30px; /* Padding inside container */
+    background-color: var(--container-background);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  /*--------------------------------------------------------------
+  # Header & Navigation
+  --------------------------------------------------------------*/
+  header {
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--primary-color);
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space title and nav link */
+    align-items: center; /* Vertically align items */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+  }
+  
+  header h1 {
+    margin: 0;
+    color: var(--primary-color);
+    font-family: 'Georgia', serif; /* Serif font for main title */
+    font-size: 2.5em; /* Larger title */
+  }
+  
+  header nav .nav-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  header nav .nav-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+  
+  /*--------------------------------------------------------------
+  # Main Content & Sections (.content-section div)
+  --------------------------------------------------------------*/
+  main {
+    /* Add styles for the main content area if needed */
+  }
+  
+  .content-section {
+    margin-bottom: 40px; /* Space between content sections */
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color); /* Separator */
+  }
+  
+  .content-section:last-of-type {
+    margin-bottom: 0; /* No margin for last section */
+    border-bottom: none; /* No border for last section */
+  }
+  
+  h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+  }
+  
+  /*--------------------------------------------------------------
+  # Image Styling
+  --------------------------------------------------------------*/
+  img {
+    max-width: 100%; /* Responsive image */
+    height: auto;
+    display: block; /* Prevent extra space below */
+    margin: 20px auto; /* Center image with vertical space */
+    border-radius: 4px; /* Slight rounding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /*--------------------------------------------------------------
+  # List Styling (ol, ul, li)
+  --------------------------------------------------------------*/
+  ol, ul {
+    padding-left: 25px; /* Indentation */
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  li {
+    margin-bottom: 8px; /* Space between items */
+  }
+  
+  /* Styling for nested list */
+  ol > li > ul {
+    margin-top: 5px; /* Space between parent li and nested ul */
+    list-style-type: circle; /* Different bullet for nested list */
+    color: var(--light-text-color); /* Slightly lighter text */
+  }
+  
+  /*--------------------------------------------------------------
+  # Media Containers (Video & Tableau)
+  --------------------------------------------------------------*/
+  .media-container {
+    margin: 20px 0; /* Vertical spacing */
+    position: relative; /* Needed for absolute positioning of iframe */
+    overflow: hidden; /* Hide anything outside the container */
+    max-width: 100%;
+  }
+  
+  .video-container {
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; /* Remove default iframe border */
+  }
+  
+  /* Specific styling for Tableau container if needed,
+     but Tableau's embed script often handles sizing.
+     This ensures the container behaves well. */
+  .tableau-container {
+      min-height: 500px; /* Ensure it has some height */
+  }
+  
+  .tableau-container iframe {
+      border: 1px solid var(--border-color); /* Add a subtle border */
+  }
+  
+  /*--------------------------------------------------------------
+  # Fact Generator (#fact-generator-section div)
+  --------------------------------------------------------------*/
+  #fact-generator-section {
+      /* Add specific styles if needed */
+  }
+  
+  #fact-generator {
+    background-color: #e3f2fd; /* Light blue background */
+    border: 1px solid #bbdefb; /* Lighter blue border */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #fact-generator h2 {
+      font-size: 1.4em;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+  }
+  
+  #fact-display {
+    background-color: var(--container-background); /* White background */
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 15px;
+    min-height: 80px; /* Minimum height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  #new-fact-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #new-fact-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px); /* Slight lift on hover */
+  }
+  
+  /*--------------------------------------------------------------
+  # Footer & Back-to-Top Link
+  --------------------------------------------------------------*/
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+  }
+  
+  .back-to-top,
+  footer .nav-link {
+    display: inline-block; /* Allow side-by-side */
+    margin: 0 10px; /* Spacing between footer links */
+    padding: 5px 0;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+  }
+  
+  .back-to-top:hover,
+  footer .nav-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+  
+  footer .copyright {
+    margin-top: 15px;
+    font-size: 0.85em;
+    color: var(--light-text-color);
+  }
+  
+  /*--------------------------------------------------------------
+  # Responsive Adjustments (Optional Example)
+  --------------------------------------------------------------*/
+  @media (max-width: 768px) {
+    .container {
+      margin: 15px;
+      padding: 15px;
+    }
+  
+    header {
+      flex-direction: column; /* Stack title and nav link */
+      align-items: flex-start; /* Align items left */
+    }
+  
+    header h1 {
+      font-size: 2em;
+      margin-bottom: 10px; /* Space below title */
+    }
+  
+    #fact-generator {
+      padding: 15px;
+    }
+  
+    #fact-display {
+      font-size: 1em;
+      min-height: 60px;
+    }
+  
+    #new-fact-button {
+      padding: 10px 20px;
+      font-size: 0.9em;
+    }
+  }
+  
