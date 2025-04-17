@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Scratch Page</title>
+    <link rel="stylesheet" href="../css/scratchstyles.css">
+
+</head>
+    <body>
+    <div class="container">
+
+        <header>
+            <h1 id="page-top">My Hobbies</h1>
+            <nav>
+                <a href="../index.html" class="nav-link">« Back to Professional Resume</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="content-section" id="intro-lists">
+                <img src="../images/chatgpt.png" alt="ChatGPT Logo"> <ol>
+                    <li>BYU</li>
+                        <ul>
+                            <li>2024 team: Retzlaff, Lassiter, Batty</li>
+                        </ul>
+                    <li>Jazz</li>
+                        <ul>
+                            <li>2011 team: Kirlenko, Williams, Hayward, and Horford</li>
+                        </ul>
+                    <li>Thunder</li>
+                        <ul>
+                            <li>2012 team: Durant, Westbrook, and Harden</li>
+                        </ul>
+                    <li>Golf</li>
+                        <ul>
+                            <li>Tony Finau</li>
+                        </ul>
+                    <li>Baseball</li>
+                        <ul>
+                            <li>Too boring for me...</li>
+                        </ul>
+                </ol>
+            </section>
+
+            <section class="content-section" id="highlights">
+                <h3>My favorite highlights</h3>
+                <div class="media-container video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1371v4_6-BE?si=1Zk4NZ_HOzej8zPH" title="YouTube video player 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                 <div class="media-container video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZDsPy0aGKIM?si=ORt4mCYUGuqzs-kU" title="YouTube video player 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <section class="content-section" id="tableau-viz">
+                 <h3>Sports Betting Data</h3>
+                 <div class='tableau-container media-container'>
+                    <div class='tableauPlaceholder' id='viz1744845000417' style='position: relative'>
+                        <noscript><a href='#'><img alt='Dashboard 1 ' src='https://public.tableau.com/static/images/Sp/SportsBettingintheUS/Dashboard1/1_rss.png' style='border: none' /></a></noscript>
+                        <object class='tableauViz' style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='site_root' value='' />
+                            <param name='name' value='SportsBettingintheUS/Dashboard1' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image' value='https://public.tableau.com/static/images/Sp/SportsBettingintheUS/Dashboard1/1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='en-GB' />
+                        </object>
+                    </div>
+                    <script type='text/javascript'>
+                        var divElement = document.getElementById('viz1744845000417');
+                        var vizElement = divElement.getElementsByTagName('object')[0];
+                        // Simplified resize logic slightly - adjust if needed
+                        function resizeViz() {
+                            var width = divElement.offsetWidth;
+                            if ( width > 800 ) { vizElement.style.width='1000px'; vizElement.style.height='1427px';}
+                            else if ( width > 500 ) { vizElement.style.width='1000px'; vizElement.style.height='1427px';}
+                            else { vizElement.style.width='100%'; vizElement.style.height='1627px';}
+                        }
+                        resizeViz(); // Call on initial load
+                        window.addEventListener('resize', resizeViz); // Adjust on resize
+
+                        var scriptElement = document.createElement('script');
+                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                    </script>
+                 </div>
+            </section>
+
+            <section class="content-section" id="fact-generator-section">
+                 <div id="fact-generator">
+                    <h2>
+                        My Favorite Sports Teams Fact Generator
+                    </h2>
+                    <div id="fact-display">
+                        Click the button to get a random fact!
+                    </div>
+                    <button id="new-fact-button">
+                        Get New Fact
+                    </button>
+                 </div>
+            </section>
+        </main>
+    </div> <script>
+        // Array of facts based on the provided topics
+        const facts = [
+            // BYU 2024 Team Facts
+            "BYU QB Jake Retzlaff transferred from Golden West College and Riverside City College before joining the Cougars.",
+            "In 2023, BYU wide receiver Darius Lassiter caught multiple touchdown passes, showcasing his playmaking ability after transferring from Eastern Michigan.",
+            "BYU defensive end Tyler Batty was a key part of the Cougar defense in the 2023 season, leading the team in sacks.",
+            "Jake Retzlaff started several games for BYU in the 2023 season after Kedon Slovis was injured.",
+            "Tyler Batty earned All-Big 12 Honorable Mention for his performance in the 2023 season.",
+
+            // Utah Jazz ~2011 Team Facts
+            "Deron Williams, point guard for the Jazz around 2011, was a 3-time NBA All-Star.",
+            "Andrei Kirilenko ('AK-47') was known for his versatility and defense with the Jazz, leading the NBA in blocks per game in the 2004-05 season.",
+            "Gordon Hayward was drafted 9th overall by the Utah Jazz in the 2010 NBA Draft and played his rookie season in 2010-2011.",
+            "The Jazz coach during the Deron Williams and Andrei Kirilenko era was the legendary Jerry Sloan.",
+            "Al Jefferson was a key center for the Utah Jazz during the early 2010s, joining the team before the 2010-2011 season.", // Note: Horford was not on the 2011 Jazz
+
+            // OKC Thunder 2012 Team Facts
+            "The 2011-2012 Oklahoma City Thunder featured the young trio of Kevin Durant, Russell Westbrook, and James Harden.",
+            "The Thunder reached the NBA Finals in 2012 but lost to the Miami Heat.",
+            "James Harden won the NBA Sixth Man of the Year award for the 2011-2012 season while playing for OKC.",
+            "Kevin Durant won his third consecutive NBA scoring title during the 2011-2012 season.",
+            "Russell Westbrook recorded multiple triple-doubles during the Thunder's 2012 playoff run.",
+            "Serge Ibaka was also a key player on the 2012 Thunder team, known for his shot-blocking.",
+
+            // Golf - Tony Finau Facts
+            "Tony Finau is a professional golfer with multiple PGA Tour victories, known for his powerful swing.",
+            "Tony Finau is of Tongan and Samoan descent and grew up in Utah.",
+            "In 2018, Tony Finau famously dislocated his ankle celebrating a hole-in-one during the Masters Par 3 Contest, popped it back in, and still competed in the tournament.",
+            "Tony Finau was featured prominently in the first season of the Netflix golf documentary series 'Full Swing'.",
+            "Tony Finau has represented the United States in both the Ryder Cup and the Presidents Cup."
+        ];
+
+        // Get references to the HTML elements
+        const factDisplay = document.getElementById('fact-display');
+        const newFactButton = document.getElementById('new-fact-button');
+
+        // Function to display a random fact
+        function displayRandomFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            const randomFact = facts[randomIndex];
+            if (factDisplay) {
+                 factDisplay.textContent = randomFact;
+                 // You might want to add CSS classes for transitions here instead of opacity
+            }
+        }
+
+         // Add event listener to the button only if it exists
+         if (newFactButton) {
+             newFactButton.addEventListener('click', () => {
+                 // Add CSS transition handling if desired
+                 displayRandomFact();
+             });
+         }
+
+        // Display an initial fact only if the display area exists
+        if (factDisplay) {
+            // Display initial fact without delay now, handle transitions with CSS if needed
+            displayRandomFact();
+        }
+    </script>
+
+       
+
+</body>
+<br>
+<br>
+<br>
+<footer>
+    
+    <p>
+        <a href="../index.html" class="nav-link">Return to Professional Resume</a>
+    </p>
+    <a href="#page-top" class="back-to-top">Back to Top</a>
+    <p class="copyright">© 2025 - Jackson Card</p>
+</footer>
+
+</html>
